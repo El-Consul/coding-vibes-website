@@ -126,7 +126,7 @@ export const translations = {
     },
     socialTitle:   { ar: 'تواصل عبر منصات التواصل', en: 'Connect on Social Media' },
     locationTitle: { ar: 'الموقع',     en: 'Location' },
-    locationValue: { ar: 'فلسطين 🇵🇸', en: 'Palestine 🇵🇸' },
+    locationValue: { ar: 'مصر 🇪🇬', en: 'Egypt 🇪🇬' },
   },
 
   footer: {

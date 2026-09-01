@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations, t } from '@/lib/translations';
-import { InstagramIcon, FacebookIcon, WhatsAppIcon, TikTokIcon } from '@/components/ui/Icons';
+import { InstagramIcon, FacebookIcon, WhatsAppIcon, TikTokIcon, LinktreeIcon } from '@/components/ui/Icons';
 
 const navLinks = [
   { href: '/',         key: 'home' as const },
@@ -15,27 +15,33 @@ const navLinks = [
 const socialLinks = [
   {
     icon: <WhatsAppIcon size={18} />,
-    href: 'https://wa.me/YOUR_WHATSAPP',
+    href: 'https://wa.me/201061770954',
     label: 'WhatsApp',
     color: 'hover:text-green-400',
   },
   {
     icon: <InstagramIcon size={18} />,
-    href: 'https://instagram.com/YOUR_INSTAGRAM',
+    href: 'https://instagram.com/coding_vibes_dev',
     label: 'Instagram',
     color: 'hover:text-pink-400',
   },
   {
     icon: <FacebookIcon size={18} />,
-    href: 'https://facebook.com/YOUR_FACEBOOK',
+    href: 'https://www.facebook.com/share/1Anfm8i4sb/',
     label: 'Facebook',
     color: 'hover:text-blue-400',
   },
   {
     icon: <TikTokIcon size={18} />,
-    href: 'https://tiktok.com/@YOUR_TIKTOK',
+    href: 'https://tiktok.com/@coding_vibes_dev',
     label: 'TikTok',
     color: 'hover:text-cyan-400',
+  },
+  {
+    icon: <LinktreeIcon size={18} />,
+    href: 'https://linktr.ee/coding_vibes_dev',
+    label: 'Linktree',
+    color: 'hover:text-emerald-400',
   },
 ];
 
@@ -96,6 +102,17 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href="https://linktr.ee/coding_vibes_dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-emerald-400 text-sm transition-colors duration-200 flex items-center gap-2 group"
+                >
+                  <span className="w-1 h-1 bg-emerald-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                  Linktree (@coding_vibes_dev)
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -106,13 +123,18 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 text-sm text-slate-400">
               <li>
-                <a href="mailto:YOUR_EMAIL@gmail.com" className="hover:text-cyan-400 transition-colors">
-                  YOUR_EMAIL@gmail.com
+                <a href="https://wa.me/201061770954" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">
+                  WhatsApp: +20 106 177 0954
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/YOUR_WHATSAPP" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">
-                  WhatsApp: +XXX XXX XXXX
+                <a href="https://instagram.com/coding_vibes_dev" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400 transition-colors">
+                  Instagram: @coding_vibes_dev
+                </a>
+              </li>
+              <li>
+                <a href="https://tiktok.com/@coding_vibes_dev" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">
+                  TikTok: @coding_vibes_dev
                 </a>
               </li>
               <li className="text-slate-500">

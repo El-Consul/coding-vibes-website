@@ -4,7 +4,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { translations, t } from '@/lib/translations';
 import NeonCard from '@/components/ui/NeonCard';
 import GlowButton from '@/components/ui/GlowButton';
-import { Heart, Globe, Cpu, CheckCircle, MessageCircle } from 'lucide-react';
+import { Heart, Globe, Cpu, CheckCircle } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/ui/Icons';
 
 type ServiceKey = 'wedding' | 'portfolio' | 'saas';
 
@@ -22,7 +23,7 @@ const serviceConfig: Array<{
     iconColor: 'text-pink-400',
     iconBg: 'bg-pink-500/10',
     glowColor: 'purple',
-    whatsapp: 'https://wa.me/YOUR_WHATSAPP?text=مرحباً،+أريد+الاستفسار+عن+دعوة+الفرح',
+    whatsapp: 'https://wa.me/201061770954?text=مرحباً+Coding+Vibes،+أريد+الاستفسار+عن+دعوات+الأفراح+والخطوبة',
   },
   {
     key: 'portfolio',
@@ -30,7 +31,7 @@ const serviceConfig: Array<{
     iconColor: 'text-cyan-400',
     iconBg: 'bg-cyan-500/10',
     glowColor: 'cyan',
-    whatsapp: 'https://wa.me/YOUR_WHATSAPP?text=مرحباً،+أريد+الاستفسار+عن+موقع+بورتفوليو',
+    whatsapp: 'https://wa.me/201061770954?text=مرحباً+Coding+Vibes،+أريد+الاستفسار+عن+موقع+بورتفوليو+وأعمال',
   },
   {
     key: 'saas',
@@ -38,7 +39,7 @@ const serviceConfig: Array<{
     iconColor: 'text-purple-400',
     iconBg: 'bg-purple-500/10',
     glowColor: 'purple',
-    whatsapp: 'https://wa.me/YOUR_WHATSAPP?text=مرحباً،+أريد+الاستفسار+عن+حل+SaaS',
+    whatsapp: 'https://wa.me/201061770954?text=مرحباً+Coding+Vibes،+أريد+الاستفسار+عن+حلول+SaaS+المخصصة',
   },
 ];
 
@@ -76,7 +77,7 @@ export default function ServiceCard({ serviceKey }: { serviceKey: ServiceKey }) 
 
           {/* CTA */}
           <GlowButton href={config.whatsapp} variant="primary" external>
-            <MessageCircle size={18} />
+            <WhatsAppIcon size={18} />
             {t(translations.services.cta, lang)}
           </GlowButton>
         </div>

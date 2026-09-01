@@ -18,14 +18,17 @@ const orgSchema = {
   description: 'Web design and development agency specializing in wedding invitations, business websites, and custom SaaS solutions.',
   foundingDate: '2022',
   url: 'https://codingvibes.dev',
-  logo: 'https://codingvibes.dev/logo.png',
+  telephone: '+201061770954',
   address: {
     '@type': 'PostalAddress',
-    addressCountry: 'PS',
+    addressCountry: 'EG',
   },
   sameAs: [
-    'https://instagram.com/YOUR_INSTAGRAM',
-    'https://facebook.com/YOUR_FACEBOOK',
+    'https://linktr.ee/coding_vibes_dev',
+    'https://instagram.com/coding_vibes_dev',
+    'https://tiktok.com/@coding_vibes_dev',
+    'https://www.facebook.com/share/1Anfm8i4sb/',
+    'https://wa.me/201061770954',
   ],
 };
 

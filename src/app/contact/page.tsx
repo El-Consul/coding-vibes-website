@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import ContactForm from '@/components/contact/ContactForm';
 import { Mail, MapPin } from 'lucide-react';
-import { WhatsAppIcon, InstagramIcon, FacebookIcon, TikTokIcon } from '@/components/ui/Icons';
+import { WhatsAppIcon, InstagramIcon, FacebookIcon, TikTokIcon, LinktreeIcon } from '@/components/ui/Icons';
 import NeonCard from '@/components/ui/NeonCard';
 
 export const metadata: Metadata = {
   title: 'تواصل معنا — Coding Vibes',
-  description: 'تواصل مع Coding Vibes عبر النموذج، WhatsApp، Instagram، أو Facebook. نحن هنا لمساعدتك في مشروعك الرقمي.',
+  description: 'تواصل مع Coding Vibes عبر النموذج، WhatsApp، Instagram، Facebook، أو TikTok. نحن هنا لمساعدتك في مشروعك الرقمي.',
   openGraph: {
     title: 'تواصل مع Coding Vibes',
     description: 'نحن هنا لمساعدتك. تواصل معنا عبر أي قناة تفضلها.',
@@ -17,8 +17,8 @@ const socialLinks = [
   {
     icon: <WhatsAppIcon size={22} />,
     label: 'WhatsApp',
-    value: '+XXX XXX XXXX',
-    href: 'https://wa.me/YOUR_WHATSAPP',
+    value: '+20 106 177 0954',
+    href: 'https://wa.me/201061770954',
     color: 'text-green-400',
     bg: 'bg-green-500/10',
     border: 'hover:border-green-500/40',
@@ -26,38 +26,47 @@ const socialLinks = [
   {
     icon: <InstagramIcon size={22} />,
     label: 'Instagram',
-    value: '@YOUR_INSTAGRAM',
-    href: 'https://instagram.com/YOUR_INSTAGRAM',
+    value: '@coding_vibes_dev',
+    href: 'https://instagram.com/coding_vibes_dev',
     color: 'text-pink-400',
     bg: 'bg-pink-500/10',
     border: 'hover:border-pink-500/40',
   },
   {
+    icon: <TikTokIcon size={22} />,
+    label: 'TikTok',
+    value: '@coding_vibes_dev',
+    href: 'https://tiktok.com/@coding_vibes_dev',
+    color: 'text-cyan-400',
+    bg: 'bg-cyan-500/10',
+    border: 'hover:border-cyan-500/40',
+  },
+  {
     icon: <FacebookIcon size={22} />,
     label: 'Facebook',
     value: 'Coding Vibes',
-    href: 'https://facebook.com/YOUR_FACEBOOK',
+    href: 'https://www.facebook.com/share/1Anfm8i4sb/',
     color: 'text-blue-400',
     bg: 'bg-blue-500/10',
     border: 'hover:border-blue-500/40',
   },
   {
-    icon: <TikTokIcon size={22} />,
-    label: 'TikTok',
-    value: '@YOUR_TIKTOK',
-    href: 'https://tiktok.com/@YOUR_TIKTOK',
-    color: 'text-cyan-400',
-    bg: 'bg-cyan-500/10',
-    border: 'hover:border-cyan-500/40',
+    icon: <LinktreeIcon size={22} />,
+    label: 'Linktree',
+    value: 'linktr.ee/coding_vibes_dev',
+    href: 'https://linktr.ee/coding_vibes_dev',
+    color: 'text-emerald-400',
+    bg: 'bg-emerald-500/10',
+    border: 'hover:border-emerald-500/40',
   },
   {
     icon: <Mail size={22} />,
     label: 'Email',
-    value: 'YOUR_EMAIL@gmail.com',
-    href: 'mailto:YOUR_EMAIL@gmail.com',
-    color: 'text-cyan-400',
-    bg: 'bg-cyan-500/10',
-    border: 'hover:border-cyan-500/40',
+    value: 'coding.vibes.dev@gmail.com',
+    href: 'mailto:coding.vibes.dev@gmail.com',
+    color: 'text-purple-400',
+    bg: 'bg-purple-500/10',
+    border: 'hover:border-purple-500/40',
   },
 ];
 
@@ -75,7 +84,7 @@ export default function ContactPage() {
           </span>
         </h1>
         <p className="text-slate-400 text-lg max-w-xl mx-auto">
-          نحن هنا لمساعدتك في أي وقت. أرسل لنا رسالة وسنرد عليك في أقرب وقت.
+          نحن هنا لمساعدتك في أي وقت. أرسل لنا رسالة أو تواصل مباشرة عبر منصتك المفضلة.
         </p>
       </div>
 
@@ -90,7 +99,7 @@ export default function ContactPage() {
           </div>
 
           {/* Social + Info */}
-          <div className="lg:col-span-2 space-y-5">
+          <div className="lg:col-span-2 space-y-4">
             {/* Social Links */}
             {socialLinks.map((s) => (
               <a
@@ -98,26 +107,26 @@ export default function ContactPage() {
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex items-center gap-4 p-4 rounded-xl bg-[#0D1235]/80 border border-slate-700/40 ${s.border} transition-all duration-300 group`}
+                className={`flex items-center gap-4 p-3.5 rounded-xl bg-[#0D1235]/80 border border-slate-700/40 ${s.border} transition-all duration-300 group`}
               >
-                <div className={`w-11 h-11 rounded-xl ${s.bg} ${s.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-10 h-10 rounded-xl ${s.bg} ${s.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
                   {s.icon}
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <p className="text-slate-400 text-xs mb-0.5">{s.label}</p>
-                  <p className={`text-sm font-semibold ${s.color}`}>{s.value}</p>
+                  <p className={`text-sm font-semibold ${s.color} truncate`}>{s.value}</p>
                 </div>
               </a>
             ))}
 
             {/* Location */}
-            <div className="flex items-center gap-4 p-4 rounded-xl bg-[#0D1235]/80 border border-slate-700/40">
-              <div className="w-11 h-11 rounded-xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center flex-shrink-0">
-                <MapPin size={22} />
+            <div className="flex items-center gap-4 p-3.5 rounded-xl bg-[#0D1235]/80 border border-slate-700/40">
+              <div className="w-10 h-10 rounded-xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center flex-shrink-0">
+                <MapPin size={20} />
               </div>
               <div>
                 <p className="text-slate-400 text-xs mb-0.5">الموقع / Location</p>
-                <p className="text-sm font-semibold text-slate-200">فلسطين 🇵🇸</p>
+                <p className="text-sm font-semibold text-slate-200">مصر 🇪🇬 (Egypt)</p>
               </div>
             </div>
           </div>

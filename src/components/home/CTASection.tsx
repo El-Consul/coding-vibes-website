@@ -3,7 +3,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations, t } from '@/lib/translations';
 import GlowButton from '@/components/ui/GlowButton';
-import { MessageCircle } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/ui/Icons';
 
 export default function CTASection() {
   const { lang } = useLanguage();
@@ -35,12 +35,12 @@ export default function CTASection() {
         </p>
 
         <GlowButton
-          href="https://wa.me/YOUR_WHATSAPP"
+          href="https://wa.me/201061770954"
           variant="primary"
           size="lg"
           external
         >
-          <MessageCircle size={20} />
+          <WhatsAppIcon size={20} />
           {t(cta.btn, lang)}
         </GlowButton>
       </div>
