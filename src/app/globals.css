@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+@import "tailwindcss";
+
+/* ─── Tailwind v4 Theme Tokens ─── */
+@theme {
+  --color-cyan:    #00D9FF;
+  --color-magenta: #E500FF;
+  --color-dark:    #0A0E27;
+  --color-card:    #0D1235;
+  --color-deeper:  #080B20;
+
+  --font-tajawal: 'Tajawal', sans-serif;
+  --font-inter:   'Inter', sans-serif;
+  --font-sans:    'Tajawal', 'Inter', sans-serif;
+
+  --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
+  --animate-float:      float 5s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 4s ease-in-out infinite;
+  --animate-spin-slow:  spin-slow 8s linear infinite;
+  --animate-glow-pulse: glow-pulse 2s ease-in-out infinite;
+
+  --shadow-neon-cyan:    0 0 20px rgba(0, 217, 255, 0.4);
+  --shadow-neon-magenta: 0 0 20px rgba(229, 0, 255, 0.4);
+  --shadow-neon-lg:      0 0 40px rgba(0, 217, 255, 0.3), 0 0 80px rgba(0, 217, 255, 0.1);
+
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) scale(1);   opacity: 0.3; }
+    50%       { transform: translateY(-20px) scale(1.2); opacity: 0.6; }
+  }
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.5; }
+    50%       { opacity: 1; }
+  }
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(0, 217, 255, 0.3); }
+    50%       { box-shadow: 0 0 30px rgba(0, 217, 255, 0.6), 0 0 60px rgba(0, 217, 255, 0.2); }
+  }
+}
+
+/* ─── Custom properties ─── */
+:root {
+  --cyan:    #00D9FF;
+  --magenta: #E500FF;
+  --dark:    #0A0E27;
+  --card:    #0D1235;
+}
+
+/* ─── Base ─── */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Tajawal', 'Inter', sans-serif;
+  background-color: var(--dark);
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+[lang="en"] body,
+[dir="ltr"] body {
+  font-family: 'Inter', 'Tajawal', sans-serif;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080B20;
+}
+::-webkit-scrollbar-thumb {
+  background: #00D9FF33;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00D9FF66;
+}
+
+/* ─── Typography helpers ─── */
+.font-tajawal { font-family: 'Tajawal', sans-serif; }
+.font-inter   { font-family: 'Inter', sans-serif; }
+
+/* ─── Neon text helpers ─── */
+.neon-text-cyan {
+  color: var(--cyan);
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.5), 0 0 30px rgba(0, 217, 255, 0.2);
+}
+.neon-text-magenta {
+  color: var(--magenta);
+  text-shadow: 0 0 10px rgba(229, 0, 255, 0.5), 0 0 30px rgba(229, 0, 255, 0.2);
+}
+
+/* ─── Glass morphism ─── */
+.glass {
+  background: rgba(13, 18, 53, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 217, 255, 0.12);
+}
+
+/* ─── Section dividers ─── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.3), transparent);
+}
