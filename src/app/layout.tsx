@@ -1,9 +1,10 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, Tajawal } from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -17,6 +18,12 @@ const tajawal = Tajawal({
   variable: '--font-tajawal',
   display: 'swap',
 });
+
+export const viewport: Viewport = {
+  themeColor: '#0A0E27',
+  width: 'device-width',
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://codingvibes.dev'),
@@ -49,13 +56,32 @@ export const metadata: Metadata = {
     description: 'دعوات أفراح رقمية، مواقع بورتفوليو، وحلول SaaS مخصصة.',
     images: ['/og-image.png'],
   },
-  robots: { index: true, follow: true },
-  icons: { icon: '/favicon.ico', apple: '/apple-touch-icon.png' },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
+  },
+  category: 'technology',
+  alternates: {
+    canonical: 'https://codingvibes.dev',
+  },
+  icons: {
+    icon: [{ url: '/favicon.ico' }, { url: '/icon.png', type: 'image/png' }],
+    apple: '/apple-touch-icon.png',
+  },
+  appleWebApp: {
+    title: 'Coding Vibes',
+    capable: true,
+    statusBarStyle: 'black-translucent',
+  },
+  formatDetection: { telephone: false },
+  applicationName: 'Coding Vibes',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ar" dir="rtl" className={`${inter.variable} ${tajawal.variable}`}>
+      <GoogleAnalytics />
       <body className="bg-[#0A0E27] text-slate-200 antialiased font-tajawal selection:bg-cyan-500/30 selection:text-cyan-100">
         <LanguageProvider>
           <Navbar />

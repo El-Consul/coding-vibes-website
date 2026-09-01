@@ -7,9 +7,26 @@ import NeonCard from '@/components/ui/NeonCard';
 export const metadata: Metadata = {
   title: 'تواصل معنا — Coding Vibes',
   description: 'تواصل مع Coding Vibes عبر النموذج، WhatsApp، Instagram، Facebook، أو TikTok. نحن هنا لمساعدتك في مشروعك الرقمي.',
+  alternates: {
+    canonical: 'https://codingvibes.dev/contact',
+  },
   openGraph: {
     title: 'تواصل مع Coding Vibes',
     description: 'نحن هنا لمساعدتك. تواصل معنا عبر أي قناة تفضلها.',
+    url: 'https://codingvibes.dev/contact',
+  },
+};
+
+const contactSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'تواصل مع Coding Vibes',
+  url: 'https://codingvibes.dev/contact',
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'Coding Vibes',
+    telephone: '+201061770954',
+    email: 'codingvibesdev1@gmail.com',
   },
 };
 
@@ -72,7 +89,12 @@ const socialLinks = [
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-[#0A0E27] pt-24 pb-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+      />
+      <div className="min-h-screen bg-[#0A0E27] pt-24 pb-20">
       {/* Page header */}
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
         <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-64 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
@@ -133,5 +155,6 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -5,9 +5,13 @@ export const metadata: Metadata = {
   title: 'الخدمات — Coding Vibes',
   description:
     'اكتشف خدمات Coding Vibes: دعوات الأفراح الرقمية، مواقع البورتفوليو والأعمال، وحلول SaaS المخصصة. اطلب عرض سعر مخصصاً الآن.',
+  alternates: {
+    canonical: 'https://codingvibes.dev/services',
+  },
   openGraph: {
     title: 'خدمات Coding Vibes — دعوات، مواقع، SaaS',
     description: 'دعوات الأفراح الرقمية، مواقع البورتفوليو، وحلول SaaS. اطلب عرض سعر الآن.',
+    url: 'https://codingvibes.dev/services',
   },
 };
 

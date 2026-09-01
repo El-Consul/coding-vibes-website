@@ -5,9 +5,13 @@ export const metadata: Metadata = {
   title: 'من نحن — Coding Vibes',
   description:
     'تعرف على Coding Vibes: وكالة تصميم وتطوير ويب بخبرة 3+ سنوات. نؤمن بسرعة التسليم، الجودة العالية، والأسعار التنافسية.',
+  alternates: {
+    canonical: 'https://codingvibes.dev/about',
+  },
   openGraph: {
     title: 'من نحن — Coding Vibes',
     description: 'وكالة تصميم وتطوير ويب بخبرة 3+ سنوات. جودة، سرعة، أسعار مناسبة.',
+    url: 'https://codingvibes.dev/about',
   },
 };
 
