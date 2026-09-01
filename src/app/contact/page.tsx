@@ -62,8 +62,8 @@ const socialLinks = [
   {
     icon: <Mail size={22} />,
     label: 'Email',
-    value: 'coding.vibes.dev@gmail.com',
-    href: 'mailto:coding.vibes.dev@gmail.com',
+    value: 'codingvibesdev1@gmail.com',
+    href: 'mailto:codingvibesdev1@gmail.com',
     color: 'text-purple-400',
     bg: 'bg-purple-500/10',
     border: 'hover:border-purple-500/40',

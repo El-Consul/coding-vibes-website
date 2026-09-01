@@ -19,6 +19,7 @@ const orgSchema = {
   foundingDate: '2022',
   url: 'https://codingvibes.dev',
   telephone: '+201061770954',
+  email: 'codingvibesdev1@gmail.com',
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'EG',

@@ -123,6 +123,11 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 text-sm text-slate-400">
               <li>
+                <a href="mailto:codingvibesdev1@gmail.com" className="hover:text-purple-400 transition-colors">
+                  Email: codingvibesdev1@gmail.com
+                </a>
+              </li>
+              <li>
                 <a href="https://wa.me/201061770954" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">
                   WhatsApp: +20 106 177 0954
                 </a>
